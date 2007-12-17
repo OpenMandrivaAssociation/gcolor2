@@ -7,7 +7,6 @@ License:	GPL
 URL:		http://gcolor2.sourceforge.net/
 Source0:	http://prdownloads.sourceforge.net/gcolor2/%{name}-%{version}.tar.bz2       
 Patch1:		gcolor2-french.patch.bz2
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 BuildRequires:	gtk2-devel
 BuildRequires:	ImageMagick
