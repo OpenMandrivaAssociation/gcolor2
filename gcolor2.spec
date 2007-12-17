@@ -31,11 +31,15 @@ rm -rf %{buildroot}
 %{find_lang} %{name}
 
 # Menu
-mkdir -p %{buildroot}%{_menudir}
-cat >%{buildroot}%{_menudir}/%{name} <<EOF
-?package(%{name}): command="%{_bindir}/%{name}" needs="X11" \
-icon="%{name}.png" section="Multimedia/Graphics" \
-title="GColor2" longtitle="GTK2 color chooser"
+mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications/
+cat << EOF > %buildroot%{_datadir}/applications/mandriva-%{name}.desktop
+[Desktop Entry]
+Type=Application <<EOF
+Exec=%{_bindir}/%{name}
+Icon=Graphics;Viewer;
+Categories=Multimedia/Graphics
+Name=GColor2
+Comment=GTK2 color chooser
 EOF
 
 #icons
@@ -59,7 +63,7 @@ rm -rf %{buildroot}
 %defattr(-,root,root,-)
 %doc AUTHORS ChangeLog NEWS README
 %{_bindir}/%{name}
-%{_menudir}/%{name}
+%{_datadir}/applications/mandriva-%{name}.desktop
 %{_datadir}/pixmaps/%{name}
 %{_iconsdir}/%name.png
 %{_liconsdir}/%name.png
