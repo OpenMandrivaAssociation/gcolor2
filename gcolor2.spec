@@ -36,8 +36,8 @@ cat << EOF > %buildroot%{_datadir}/applications/mandriva-%{name}.desktop
 [Desktop Entry]
 Type=Application <<EOF
 Exec=%{_bindir}/%{name}
-Icon=Graphics;Viewer;
-Categories=Multimedia/Graphics
+Icon=%{name}
+Categories=Graphics;Viewer;
 Name=GColor2
 Comment=GTK2 color chooser
 EOF
