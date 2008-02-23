@@ -1,6 +1,6 @@
 Name:		gcolor2
 Version:	0.4
-Release:	%mkrel 1
+Release:	%mkrel 2
 Summary:	Simple color selector
 Group:		Graphics
 License:	GPL
