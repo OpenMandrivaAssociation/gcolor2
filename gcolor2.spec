@@ -1,6 +1,6 @@
 Name:		gcolor2
 Version:	0.4
-Release:	%mkrel 2
+Release:	%mkrel 3
 Summary:	Simple color selector
 Group:		Graphics
 License:	GPL
@@ -35,7 +35,7 @@ rm -rf %{buildroot}
 mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications/
 cat << EOF > %buildroot%{_datadir}/applications/mandriva-%{name}.desktop
 [Desktop Entry]
-Type=Application <<EOF
+Type=Application 
 Exec=%{_bindir}/%{name}
 Icon=%{name}
 Categories=GNOME;GTK;Graphics;Viewer
