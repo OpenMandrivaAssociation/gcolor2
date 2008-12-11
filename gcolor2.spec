@@ -10,7 +10,7 @@ Patch1:		gcolor2-french.patch.bz2
 BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 BuildRequires:	gtk2-devel
-BuildRequires:	ImageMagick perl(XML::Parser)
+BuildRequires:	imagemagick perl(XML::Parser)
 
 %description 
 Gcolor2 is a GTK2 color selector to provide a quick and easy way to find
