@@ -1,6 +1,6 @@
 Name:		gcolor2
 Version:	0.4
-Release:	%mkrel 8
+Release:	%mkrel 9
 Summary:	Simple color selector
 Group:		Graphics
 License:	GPLv2+
@@ -48,10 +48,11 @@ rm -rf %{buildroot}
 mkdir -p %{buildroot}%{_datadir}/applications/
 cat << EOF > %buildroot%{_datadir}/applications/mandriva-%{name}.desktop
 [Desktop Entry]
-Type=Application 
+Encoding=UTF-8
+Type=Application
 Exec=%{_bindir}/%{name}
 Icon=%{name}
-Categories=GNOME;GTK;Graphics;Utility
+Categories=GNOME;Graphics;GTK;Utility;
 NotShowIn=KDE;
 Name=Color Chooser
 Name[fr]=Sélecteur de couleur
