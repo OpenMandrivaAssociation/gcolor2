@@ -1,11 +1,12 @@
 Name:		gcolor2
 Version:	0.4
-Release:	%mkrel 10
+Release:	%mkrel 11
 Summary:	Simple color selector
 Group:		Graphics
 License:	GPLv2+
 URL:		http://gcolor2.sourceforge.net/
-Source0:	http://prdownloads.sourceforge.net/gcolor2/%{name}-%{version}.tar.bz2       
+Source0:	http://prdownloads.sourceforge.net/gcolor2/%{name}-%{version}.tar.bz2
+Source1:	es.po    
 Patch0:		gcolor2-french.patch
 Patch1:		gcolor2-0.4-amd64.patch
 BuildRoot:	%{_tmppath}/%{name}-%{version}
@@ -22,6 +23,7 @@ colors for whatever task is at hand. Colors can be saved and deleted as well.
 %setup -q
 %patch0 -p1
 %patch1 -p1
+cp %{SOURCE1} po
 
 %build
 #alias libtoolize=true
@@ -33,8 +35,8 @@ intltoolize --force
 
 %configure2_5x
 
-#language not detected
-sed -i s/"ALL_LINGUAS ="/"ALL_LINGUAS = fr"/"" po/Makefile
+#languages not detected
+sed -i s/"ALL_LINGUAS ="/"ALL_LINGUAS = fr es"/"" po/Makefile
 
 %make
 
