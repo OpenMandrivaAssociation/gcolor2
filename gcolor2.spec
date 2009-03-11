@@ -1,6 +1,6 @@
 Name:		gcolor2
 Version:	0.4
-Release:	%mkrel 9
+Release:	%mkrel 10
 Summary:	Simple color selector
 Group:		Graphics
 License:	GPLv2+
@@ -53,7 +53,6 @@ Type=Application
 Exec=%{_bindir}/%{name}
 Icon=%{name}
 Categories=GNOME;Graphics;GTK;Utility;
-NotShowIn=KDE;
 Name=Color Chooser
 Name[fr]=Sélecteur de couleur
 GenericName=Color Chooser
