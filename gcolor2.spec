@@ -1,13 +1,16 @@
 Name:		gcolor2
 Version:	0.4
-Release:	%mkrel 12
+Release:	%mkrel 13
 Summary:	Simple color selector
 Group:		Graphics
 License:	GPLv2+
 URL:		http://gcolor2.sourceforge.net/
-Source0:	http://prdownloads.sourceforge.net/gcolor2/%{name}-%{version}.tar.bz2
+Source0:		http://prdownloads.sourceforge.net/gcolor2/%{name}-%{version}.tar.bz2
 Source1:	es.po
-Source2:	tr.po    
+Source2:	tr.po
+Source3:	it.po
+Source4:	pt_BR.po  
+Source5:	el.po
 Patch0:		gcolor2-french.patch
 Patch1:		gcolor2-0.4-amd64.patch
 BuildRoot:	%{_tmppath}/%{name}-%{version}
@@ -24,8 +27,8 @@ colors for whatever task is at hand. Colors can be saved and deleted as well.
 %setup -q
 %patch0 -p1
 %patch1 -p1
-cp %{SOURCE1} po
-cp %{SOURCE2} po
+
+cp %{SOURCE1} %{SOURCE2} %{SOURCE3} %{SOURCE4} %{SOURCE5} po
 
 %build
 #alias libtoolize=true
@@ -38,7 +41,7 @@ intltoolize --force
 %configure2_5x
 
 #languages not detected
-sed -i s/"ALL_LINGUAS ="/"ALL_LINGUAS = fr es tr"/"" po/Makefile
+sed -i s/"ALL_LINGUAS ="/"ALL_LINGUAS = el es it fr pt_BR tr"/"" po/Makefile
 
 %make
 
@@ -58,11 +61,20 @@ Exec=%{_bindir}/%{name}
 Icon=%{name}
 Categories=GNOME;Graphics;GTK;Utility;
 Name=Color Chooser
+Name[el]=Επιλογέας χρωμάτων
 Name[fr]=Sélecteur de couleur
+Name[it]=Selettore di colori
+Name[nb]=Fargevelger
 GenericName=Color Chooser
+GenericName[el]=Επιλογέας χρωμάτων
 GenericName[fr]=Sélecteur de couleur
+GenericName[it]=Selettore di colori in GTK2
+GenericName[nb]=Fargevelger
 Comment=GTK2 color chooser
+Comment[el]=Επιλογέας χρωμάτων GTK2
 Comment[fr]=Sélecteur de couleur GTK2
+Comment[it]=Selettore di colori in GTK2
+Comment[nb]=En fargevelger for GTK2
 EOF
 
 #icons
