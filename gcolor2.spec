@@ -1,6 +1,6 @@
 Name:		gcolor2
 Version:	0.4
-Release:	%mkrel 15
+Release:	%mkrel 16
 Summary:	Simple color selector
 Group:		Graphics
 License:	GPLv2+
@@ -22,6 +22,9 @@ Source13:	nl.po
 Source14:	de.po
 Source15:	nb.po
 Source16:	ru.po
+Source17:	pt.po
+Source18:	is.po
+Source19:	bg.po
 Patch0:		gcolor2-french.patch
 Patch1:		gcolor2-0.4-amd64.patch
 Patch2:		gcolor2-i18n.patch
@@ -42,7 +45,8 @@ colors for whatever task is at hand. Colors can be saved and deleted as well.
 
 cp %{SOURCE1} %{SOURCE2} %{SOURCE3} %{SOURCE4} %{SOURCE5} %{SOURCE6} \
 	  %{SOURCE7} %{SOURCE8} %{SOURCE9} %{SOURCE10} %{SOURCE11} \
-	  %{SOURCE12} %{SOURCE13} %{SOURCE14} %{SOURCE15} %{SOURCE16} po
+	  %{SOURCE12} %{SOURCE13} %{SOURCE14} %{SOURCE15} %{SOURCE16} \
+	  %{SOURCE17} %{SOURCE18} %{SOURCE19} po
 
 %build
 echo "gcolor2.glade" >> po/POTFILES.in
@@ -53,7 +57,7 @@ intltoolize --force
 %configure2_5x
 
 #languages not detected
-sed -i s/"ALL_LINGUAS ="/"ALL_LINGUAS = ar de el es et fi fr gl hu it ky nb nl pt_BR ru sl tr"/"" po/Makefile
+sed -i s/"ALL_LINGUAS ="/"ALL_LINGUAS = ar bg de el es et fi fr gl hu is it ky nb nl pt pt_BR ru sl tr"/"" po/Makefile
 
 %make
 
@@ -81,11 +85,14 @@ Name[fi]=Värivalitsin
 Name[fr]=Sélecteur de couleur
 Name[gl]=Selector de cores
 Name[hu]=Színválasztó
+Name[is]=Litaval
 Name[it]=Selettore di colori
 Name[ky]=Түс тандагыч
 Name[nb]=Fargevelger
 Name[nl]=Kleurenkiezer
 Name[pl]=Wybór koloru
+Name[pt]=Seletor de Cores
+Name[pt_BR]=Seletor de Cores
 Name[ru]=Выбор цветов
 Name[sl]=Izbirnik barv
 Name[tr]=Renk Seçici
@@ -98,11 +105,14 @@ GenericName[fi]=Värivalitsin
 GenericName[fr]=Sélecteur de couleur
 GenericName[gl]=Selector de cores
 GenericName[hu]=Színválasztó
+GenericName[is]=Litaval
 GenericName[it]=Selettore di colori in GTK2
 GenericName[ky]=Түс тандагыч
 GenericName[nb]=Fargevelger
 GenericName[nl]=Kleurenkiezer
 GenericName[pl]=Wybór koloru
+GenericName[pt]=Seletor de Cores
+GenericName[pt_BR]=Seletor de Cores
 GenericName[ru]=Выбор цветов
 GenericName[sl]=Izbirnik barv
 GenericName[tr]=Renk Seçici
@@ -115,11 +125,14 @@ Comment[fi]=Värivalitsin GTK2:lle
 Comment[fr]=Sélecteur de couleur GTK2
 Comment[gl]=Selector de cores feito con GTK2
 Comment[hu]=Színek kiválasztása (GTK2)
+Comment[is]=GTK2 litaval
 Comment[it]=Selettore di colori in GTK2
 Comment[ky]=GTK2 түс тандагычы
 Comment[nb]=En fargevelger for GTK2
 Comment[nl]=Kleurenkiezer gebaseerd op GTK2
 Comment[pl]=Wybór koloru w GTK2
+Comment[pt]=Selecionador de cores GTK2
+Comment[pt_BR]=Selecionador de cores GTK2
 Comment[ru]=GTK2 выбор цветов
 Comment[sl]=GTK+2 Izbirnik barv
 Comment[tr]=GTK2 Renk Seçici
