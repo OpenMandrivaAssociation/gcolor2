@@ -1,0 +1,29 @@
+diff -Nru gcolor2-0.4-old/po/POTFILES.in gcolor2-0.4/po/POTFILES.in
+--- gcolor2-0.4-old/po/POTFILES.in	2005-07-07 16:12:45.000000000 +0200
++++ gcolor2-0.4/po/POTFILES.in	2006-04-11 13:24:26.000000000 +0200
+@@ -1,3 +1,4 @@
++[encoding: UTF-8]
+ # List of source files containing translatable strings.
+ 
+ src/main.c
+diff -Nru gcolor2-0.4-old/src/main.c gcolor2-0.4/src/main.c
+--- gcolor2-0.4-old/src/main.c	2005-07-11 16:55:49.000000000 +0200
++++ gcolor2-0.4/src/main.c	2006-04-11 13:19:30.000000000 +0200
+@@ -164,7 +164,7 @@
+ 	gtk_tree_view_set_model (GTK_TREE_VIEW (treeview), GTK_TREE_MODEL (liststore));
+ 	
+ 	column = gtk_tree_view_column_new ();
+-	gtk_tree_view_column_set_title (column, "Color");
++	gtk_tree_view_column_set_title (column, _("Color"));
+ 	
+ 	renderer = gtk_cell_renderer_pixbuf_new ();
+ 	gtk_tree_view_column_pack_start (column, renderer, FALSE);
+@@ -179,7 +179,7 @@
+ 	
+ 	
+ 	renderer = gtk_cell_renderer_text_new ();
+-	column = gtk_tree_view_column_new_with_attributes ("Name", renderer,
++	column = gtk_tree_view_column_new_with_attributes (_("Name"), renderer,
+ 													   "text", COLOR_NAME, NULL);
+ 	gtk_tree_view_column_set_sort_column_id (column, COLOR_NAME);
+ 	gtk_tree_view_append_column (GTK_TREE_VIEW (treeview), column);
