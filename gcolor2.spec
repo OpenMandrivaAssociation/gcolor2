@@ -158,3 +158,105 @@ rm -rf %{buildroot}
 %{_iconsdir}/%name.png
 %{_liconsdir}/%name.png
 %{_miconsdir}/%name.png
+
+
+%changelog
+* Thu Dec 09 2010 Oden Eriksson <oeriksson@mandriva.com> 0.4-19mdv2011.0
++ Revision: 618429
+- the mass rebuild of 2010.0 packages
+
+* Fri Sep 11 2009 Thierry Vignaud <tv@mandriva.org> 0.4-18mdv2010.0
++ Revision: 437658
+- rebuild
+
+* Thu Mar 26 2009 Emmanuel Andry <eandry@mandriva.org> 0.4-17mdv2009.1
++ Revision: 361427
+- provide .po files in a compressed archive
+  Davy Defaud <davy.defaud@free.fr>
+    - add missing Polish po file and Bulgarian menu entries
+    - really fix non gettextized strings with P2
+    - drop P0 and provide French as a po file like others
+    - automate the list of available languages to build
+
+* Sun Mar 22 2009 Emmanuel Andry <eandry@mandriva.org> 0.4-16mdv2009.1
++ Revision: 360345
+- add more translations
+
+* Wed Mar 18 2009 Emmanuel Andry <eandry@mandriva.org> 0.4-15mdv2009.1
++ Revision: 357364
+- add more translations
+- fix non gettextized strings with P2
+
+* Sat Mar 14 2009 Emmanuel Andry <eandry@mandriva.org> 0.4-14mdv2009.1
++ Revision: 354978
+- add more translations
+
+* Thu Mar 12 2009 Emmanuel Andry <eandry@mandriva.org> 0.4-13mdv2009.1
++ Revision: 354359
+- added another bunch of translations
+
+* Thu Mar 12 2009 Emmanuel Andry <eandry@mandriva.org> 0.4-12mdv2009.1
++ Revision: 354299
+- add turkish translation?\195
+
+* Wed Mar 11 2009 Emmanuel Andry <eandry@mandriva.org> 0.4-11mdv2009.1
++ Revision: 353772
+- add spanish translation
+
+* Wed Mar 11 2009 Emmanuel Andry <eandry@mandriva.org> 0.4-10mdv2009.1
++ Revision: 353571
+- update french language patch
+- make it visible for kde users
+
+* Tue Mar 10 2009 Emmanuel Andry <eandry@mandriva.org> 0.4-9mdv2009.1
++ Revision: 353498
+- fix again desktop file
+
+* Tue Mar 10 2009 Emmanuel Andry <eandry@mandriva.org> 0.4-8mdv2009.1
++ Revision: 353485
+- fix license
+- fix desktop categories
+- improve desktop file (Davy Defaud)
+- uncompress patch
+- localization never applied : use intltoolize and autoreconf
+- workaround undetected language file by intltoolize
+
+* Sun Mar 08 2009 Emmanuel Andry <eandry@mandriva.org> 0.4-6mdv2009.1
++ Revision: 352937
+- add gentoo patch to fix crash on x86_64 (#47608)
+
+  + Oden Eriksson <oeriksson@mandriva.com>
+    - lowercase ImageMagick
+
+* Thu Jul 24 2008 Thierry Vignaud <tv@mandriva.org> 0.4-5mdv2009.0
++ Revision: 245710
+- rebuild
+
+  + Pixel <pixel@mandriva.com>
+    - rpm filetriggers deprecates update_menus/update_scrollkeeper/update_mime_database/update_icon_cache/update_desktop_database/post_install_gconf_schemas
+
+* Mon Mar 10 2008 Nicolas Lécureuil <nlecureuil@mandriva.com> 0.4-3mdv2008.1
++ Revision: 183224
+- Fix Desktop file
+
+* Sun Feb 24 2008 Nicolas Lécureuil <nlecureuil@mandriva.com> 0.4-2mdv2008.1
++ Revision: 174139
+- Fix desktop file (Bug #38093)
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - fix auto conversion
+
+* Mon Dec 17 2007 Thierry Vignaud <tv@mandriva.org> 0.4-1mdv2008.1
++ Revision: 131549
+- auto-convert XDG menu entry
+- BR perl(XML::Parser)
+- kill re-definition of %%buildroot on Pixel's request
+- import gcolor2
+
+
+* Sat Apr 15 2006 Austin Acton <austin@mandriva.org> 0.4-1mdk
+- work with spec from Davy Defaud <davy.defaud@free.fr>
+
