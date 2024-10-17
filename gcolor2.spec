@@ -4,7 +4,7 @@ Release:	20
 Summary:	Simple color selector
 Group:		Graphics
 License:	GPLv2+
-URL:		http://gcolor2.sourceforge.net/
+URL:		https://gcolor2.sourceforge.net/
 Source0:	http://prdownloads.sourceforge.net/gcolor2/%{name}-%{version}.tar.bz2
 Source1:	gcolor2-pofiles.tar.bz2
 
