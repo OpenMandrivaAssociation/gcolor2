@@ -12,6 +12,11 @@ Patch1:		gcolor2-0.4-amd64.patch
 Patch2:		gcolor2-i18n.patch
 BuildRoot:	%{_tmppath}/%{name}-%{version}
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	gtk2-devel
 BuildRequires:	imagemagick perl(XML::Parser)
 BuildRequires:	intltool
